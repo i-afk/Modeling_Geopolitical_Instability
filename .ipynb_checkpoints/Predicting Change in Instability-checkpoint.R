@@ -19,7 +19,7 @@ library(lubridate)
 #excel_files = list.files(excel_folder, pattern = "\\.xlsx$", full.names = TRUE)
 
 # Importing Data
-d23 = read_excel("fsi-2023.xlsx")
+d23 = read_excel("fsi-2023.xlsx") # return and redo
 d22 = read_excel("fsi-2022.xlsx")
 d21 = read_excel("fsi-2021.xlsx")
 d20 = read_excel("fsi-2020.xlsx")
@@ -58,7 +58,7 @@ d23$Year = "2023-1-1" # Change it to "2023-1-1" format
 d23$Year <- as_datetime(d23$Year)
 
 # 
-n23 = d23[,c('Country', 'Total')]
+n23 = d23[,c('Country', 'Total')]# return and redo
 n22 = d22[,c('Country', 'Total')]
 n21 = d21[,c('Country', 'Total')]
 n20 = d20[,c('Country', 'Total')]
@@ -79,7 +79,7 @@ n06 = d06[,c('Country', 'Total')]
 
 
 # Joining n to d
-d22 = inner_join(d22,n23, by = 'Country')
+d22 = inner_join(d22,n23, by = 'Country')# return and redo
 d21 = inner_join(d21,n22, by = 'Country')
 d20 = inner_join(d20,n21, by = 'Country')
 d19 = inner_join(d19,n20, by = 'Country')
